@@ -6,6 +6,20 @@ _Minimal System to manage user and publications._
 
 Personal project to learn FastAPI / Python. 
 
+### Achievements 2023 :star2:
+
+- [x] Added a CRUD for publications.
+- [x] Implemented authentication
+- [x] Added testing
+- [ ] Added a CRUD for comments
+- [ ] Added endpoints to register, logout and update profile
+- [ ] Configured hexagonal architecture
+- [ ] Added a Docker container
+- [ ] Implemented GraphQL
+- [ ] Implemented a MySQL database
+- [ ] Included a CI/CD pipeline with GitHub Actions
+- [ ] Implemented best practices like dotenv, logging, etc.
+
 ## Getting Started :rocket:
 
 These instructions will get you a copy of the project up and running on your local machine.

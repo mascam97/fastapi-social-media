@@ -9,4 +9,5 @@ user_router = APIRouter()
 def login(user: User):
     if user.email == "admin@gmail.com" and user.password == "admin":
         token: str = create_token(user.dict())
-        return JSONResponse(status_code=200, content=token)
+        return JSONResponse(status_code=200, content={"token": token})
+    return JSONResponse(status_code=401, content={"detail": "Invalid credentials"})

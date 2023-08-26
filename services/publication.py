@@ -22,7 +22,8 @@ class PublicationService:
         new_publication = PublicationModel(**publication.dict())
         self.db.add(new_publication)
         self.db.commit()
-        return
+        self.db.refresh(new_publication)
+        return new_publication
 
     def update_publication(self, id: int, data: Publication):
         publication = self.db.query(PublicationModel).filter(PublicationModel.id == id).first()
@@ -30,9 +31,10 @@ class PublicationService:
         publication.content = data.content
         publication.state = data.state
         self.db.commit()
-        return
+        self.db.refresh(publication)
+        return publication
 
     def delete_publication(self, id: int):
         self.db.query(PublicationModel).filter(PublicationModel.id == id).delete()
         self.db.commit()
-        return
+        return None

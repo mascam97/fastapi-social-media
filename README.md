@@ -19,7 +19,7 @@ The programs you need are:
 
 ### Installing 🔧
 
-Install the Pyhton dependencies:
+Install the Python dependencies:
 
 ```
 pip install -r requirements.txt
@@ -31,9 +31,26 @@ Then, run the application with
 uvicorn main:app —reload
 ```
 
+## Running the tests ⚙️
+
+To run the tests, run the following command
+
+```
+python3 -m pytest
+```
+
+### Include more dependencies :package:
+
+To include more dependencies into requirements.txt, run the following command
+
+```
+pip3 freeze > requirements.txt
+```
+
 ### Built With 🛠️
 
 -   [FastAPI](https://fastapi.tiangolo.com/) - FastAPI framework, high performance, easy to learn, fast to code, ready for production.
+-   [pytest](https://docs.pytest.org/en/7.4.x/) - The pytest framework makes it easy to write small tests, yet scales to support complex functional testing.
 
 ### Authors
 

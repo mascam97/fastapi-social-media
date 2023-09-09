@@ -18,7 +18,7 @@ Personal project to learn FastAPI / Python.
 - [ ] Implemented GraphQL
 - [ ] Implemented a MySQL database
 - [ ] Included a CI/CD pipeline with GitHub Actions
-- [ ] Implemented best practices like dotenv, logging, etc.
+- [x] Implemented best practices like dotenv and fix PEP 8 style
 
 ## Getting Started :rocket:
 
@@ -39,7 +39,13 @@ Install the Python dependencies:
 pip install -r requirements.txt
 ```
 
-Then, run the application with
+The, copy the .env.example file to .env and fill the variables with your own values.
+
+```
+cp .env.example .env
+```
+
+Finally, run the application with
 
 ```
 uvicorn main:app —reload
@@ -61,10 +67,19 @@ To include more dependencies into requirements.txt, run the following command
 pip3 freeze > requirements.txt
 ```
 
+### Code style :art:
+
+To check the code style, and check PEP8 standard, run the following command
+
+```
+autopep8 --in-place --recursive .
+```
+
 ### Built With 🛠️
 
 -   [FastAPI](https://fastapi.tiangolo.com/) - FastAPI framework, high performance, easy to learn, fast to code, ready for production.
 -   [pytest](https://docs.pytest.org/en/7.4.x/) - The pytest framework makes it easy to write small tests, yet scales to support complex functional testing.
+-   [autopep8](https://pypi.org/project/autopep8/) - A tool that automatically formats Python code to conform to the PEP 8 style guide.
 
 ### Authors
 

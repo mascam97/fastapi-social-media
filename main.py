@@ -16,6 +16,7 @@ app.include_router(publication_router)
 
 Base.metadata.create_all(bind=engine)
 
+
 @app.get('/', tags=['home'])
 def message():
-    return HTMLResponse('<h1>Hello world</h1>')
+  return HTMLResponse('<h1>Hello world</h1>')
